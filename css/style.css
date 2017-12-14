@@ -1,0 +1,365 @@
+* {
+    font-family: Lato;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+
+.content-block {
+    width:100%;
+    text-align: center;
+    min-height: 500px;
+    padding: 50px 0;
+    overflow: auto;
+}
+
+.content-block h2 {
+    font-size:28px;
+    color:#333333;
+    margin-top:10px;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    background: white;
+    border: solid 1px #eeeeee;
+    
+    max-width: 500px;
+    margin-left:auto;
+    margin-right:auto;
+
+    letter-spacing: 2px;
+}
+
+.content-text {
+    text-align:left;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    border: solid 1px #eeeeee;
+    
+    margin: 30px 0;
+
+}
+
+.content-text p{
+    font-size:18px;   
+}
+
+.content-img img {
+     width:80%;      
+}
+
+.content-img {
+    margin-top:60px;
+    margin-bottom:60px;
+    text-align: center;
+}
+
+.white-textured {
+    background-image: url(../img/absurdidad.png);
+}
+
+.black-textured {
+    background-image: url(../img/footer_lodyas.png);
+}
+
+.cool-textured {
+    background-image: url(../img/gplaypattern.png);   
+}
+
+
+#hero {
+    min-height: 1000px;
+    background-image: url(../img/robot/circuits_blur_dark.jpg);
+    background-size: cover;
+}
+
+.tiles {
+    margin: 40px 0;   
+}
+
+#title {
+    width:100%;
+    display:block;
+    font-size: 120px;;
+    color:white;
+    letter-spacing: 40px;
+    font-weight:200;
+    margin:0;
+    text-align: center;
+    margin-top: 120px;
+    padding-left:40px;
+}
+
+#subtitle {
+    
+    font-size: 20px;
+    color:white;
+    font-weight:200;
+    text-align: center;
+    margin:0;
+    margin-top:120px;
+    margin-bottom: 120px;
+}
+
+#github {
+    margin-top: 40px;
+    text-align: center;
+}
+#github svg:hover path {
+    fill:black;    
+}
+#github svg path{
+    transition: 0.2s all ease;
+}
+
+
+
+/*NAV*/
+#nav {
+    height: 50px;
+}
+
+#nav ul {
+    list-style: none;
+    float:right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#nav li {
+    display:inline;
+    margin: 0 10px;
+}
+
+#nav a {
+	position: relative;
+	display: inline-block;
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    
+    font-size:16px;
+    font-weight:100;
+}
+
+#nav a:hover,
+#nav a:focus {
+	outline: none;
+}
+
+
+/* Effect 13: three circles */
+
+.cl-effect-13 a {
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.cl-effect-13 a::before {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	color: transparent;
+	content: '•';
+	text-shadow: 0 0 transparent;
+	font-size: 1.2em;
+	-webkit-transition: text-shadow 0.3s, color 0.3s;
+	-moz-transition: text-shadow 0.3s, color 0.3s;
+	transition: text-shadow 0.3s, color 0.3s;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+.cl-effect-13 a:hover::before {
+	color: #fff;
+	text-shadow: 10px 0 #fff, -10px 0 #fff;
+}
+
+
+
+
+/* TILES */
+.tiles {
+    overflow:hidden;
+}
+
+.tile {
+    float:left;
+    position: relative;
+    width:22%;
+    padding-bottom: 15%;
+    transition: 0.2s all ease;
+}
+
+.tile:hover {
+    width: 25%;
+}
+
+.tile:hover .tile-content img {
+    border:solid 1px #6699bb;
+}
+.tile-content {
+   position: absolute;
+   left: 10px;
+   right: 10px;
+   top: 10px;
+   bottom: 10px;
+   overflow: hidden;   
+}
+
+.tile-content img {
+    width:100%;   
+}
+
+.content-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.content-video iframe,
+.content-video object,
+.content-video embed {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    margin-left:-40%;
+}
+
+
+@media only screen and (max-width : 480px) {
+   /* Smartphone view: 1 tile */
+    .tile {
+      width: 100%;
+      padding-bottom: 100%;
+    }
+    
+    #title {
+        margin-top:300px;
+        font-size: 30px;
+    }
+    
+    #subtitle {
+       font-size: 15px;
+    }
+    
+    #nav li{
+        display:block;
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    #nav ul {
+        float:none;
+        margin:0;
+        padding:0;
+        width:100%;
+    }
+}
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+   /* Tablet view: 2 tiles */
+   .tile {
+      width: 48%;
+      padding-bottom: 50%;
+   }
+    .tile:hover {
+        width: 50%;
+    }
+    #title {
+     font-size: 50px; 
+        margin-top:300px;
+    }
+    
+    #nav li{
+        display:block;
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    #nav ul {
+        float:none;
+        margin:0;
+        padding:0;
+        width:100%;
+    }
+}
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+   /* Small desktop / ipad view: 3 tiles */
+   .tile {
+      width: 32%;
+      padding-bottom: 33.3%;
+   }
+    
+        .tile:hover {
+        width: 33.33%;
+    }
+    
+    #title {
+     font-size: 80px;   
+    }
+}
+@media only screen and (max-width : 1290px) and (min-width : 1051px) {
+   /* Medium desktop: 4 tiles */
+   .tile {
+      width: 24%;
+      padding-bottom: 25%;
+   }
+    .tile:hover {
+        width: 25%;
+    }
+}
+
+.circle-btn.linked-in{
+    padding-top: 4px;    
+    font-size: 32px;
+    font-weight:700;
+    color:#6699ee;
+}
+
+.circle-btn.linked-in:hover{
+    background-color: #3498ee;
+    color: white;
+}
+
+.circle-btn p{
+    font-size:24px; 
+    position:relative;
+    top:10px;
+}
+
+.circle-btn{
+    display: inline-block;
+    
+    width:60px;
+    height:60px;
+    
+    margin:20px 0px;
+
+    border-radius: 30px;
+    border:#6699ee 2px solid;
+    
+    transition: 0.2s all ease;
+}
+
+.team-members {
+    list-style: none;
+    text-align: center;
+    padding:0;
+}
+.team-members li{
+    width: 160px;
+    display:inline-block;
+    margin: 0 2%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+
+
